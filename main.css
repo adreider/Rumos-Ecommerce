@@ -8,6 +8,9 @@
 body {
   font-family: -webkit-pictograph;
   background-color: #f2f2f2;
+  height: 100vh;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 main {
@@ -23,6 +26,14 @@ section .horizontal-scroll-wrapper {
   height: 300px;
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+.products.primary {
+  margin-bottom: 10px;
+}
+
+hr {
+  margin: 20px 0;
 }
 
 .horizontal-scroll-wrapper > div {
@@ -69,6 +80,40 @@ section .horizontal-scroll-wrapper {
 
 img {
   max-width: 80px;
+}
+
+.horizontalMobileScroll {
+  --items: 3;
+  --cell-padding: 0.5rem;
+  --cell-basis: calc((100% - var(--cell-padding) * 2) / var(--items));
+
+  display: flex;
+  overflow: auto;
+}
+
+.horizontalMobileScroll__cell {
+  flex: 1 0 var(--cell-basis);
+  padding: var(--cell-padding);
+}
+
+.horizontalMobileScroll__inner {
+  height: 8rem;
+  display: flex;
+  width: 15rem;
+  background-color: white;
+  box-shadow: 1px 2px 5px 0px #a9a9a9;
+}
+
+.content-item {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.img-product {
+  max-width: 50%;
 }
 
 @media only screen and (max-width: 425px) {
