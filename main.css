@@ -71,7 +71,7 @@ img {
   max-width: 80px;
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 425px) {
   .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
