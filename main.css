@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+body {
+  font-family: -webkit-pictograph;
+  background-color: #f2f2f2;
+}
+
+main {
+  margin-top: 20px;
+}
+
+section .scroll-direction-horizontal {
+  scroll-direction: horizontal;
+}
+
+section .horizontal-scroll-wrapper {
+  width: 100px;
+  height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.horizontal-scroll-wrapper > div {
+  width: 100px;
+  height: 100px;
+}
+
+.horizontal-scroll-wrapper {
+  transform: rotate(-90deg);
+  transform-origin: right top;
+}
+
+.horizontal-scroll-wrapper > div {
+  transform: rotate(90deg);
+  transform-origin: right top;
+}
+
+.horizontal-scroll-wrapper {
+  transform: rotate(-90deg) translateY(-100px);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 5px;
+  background-color: #ffffff;
+  padding: 5px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid rgb(255 255 255);
+  border-radius: 6px;
+  text-align: center;
+  font-size: 30px;
+  border-style: solid;
+  box-shadow: 1px 2px 5px 0px #a9a9a9;
+}
+
+.price-value {
+  color: red;
+  font-weight: bold;
+}
+
+img {
+  max-width: 80px;
+}
+
+@media only screen and (max-width: 320px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    background-color: #ffffff;
+    padding: 5px;
+  }
+
+  .grid-container div {
+    font-size: 10px;
+  }
+
+  img {
+    max-width: 70px;
+  }
+}
